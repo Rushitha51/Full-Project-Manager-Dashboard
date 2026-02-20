@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Manager Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <div class="sidebar">
+        <h2>Project Manager</h2>
+        <ul>
+            <li>Dashboard</li>
+            <li>Projects</li>
+            <li>Tasks</li>
+            <li onclick="toggleMode()">Toggle Mode</li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h1>Dashboard Overview</h1>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Total Projects</h3>
+                <p id="totalProjects">0</p>
+            </div>
+            <div class="card">
+                <h3>Total Tasks</h3>
+                <p id="totalTasks">0</p>
+            </div>
+            <div class="card">
+                <h3>Completed</h3>
+                <p id="completedTasks">0</p>
+            </div>
+            <div class="card">
+                <h3>Pending</h3>
+                <p id="pendingTasks">0</p>
+            </div>
+        </div>
+
+        <h2>Add Project</h2>
+        <div class="form">
+            <input type="text" id="projectName" placeholder="Project Name">
+            <input type="number" id="taskCount" placeholder="Number of Tasks">
+            <button onclick="addProject()">Add</button>
+        </div>
+
+        <h2>Project List</h2>
+        <div id="projectList"></div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
